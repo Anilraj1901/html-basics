@@ -1,0 +1,134 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+body{
+	height: 100vh;
+	width: 100%;
+	background-color: #5199e4;
+}
+.container{
+
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	display: block;
+	background: #ffff;
+	width: 410px;
+	padding: 30px;
+}
+.text{
+	font-size: 35px;
+	font-weight: 600;
+	text-align: center;
+	color: #5199e4;
+}
+.data{
+	height: 45px;
+	width: 100%;
+
+	margin: 40px 0;
+}
+form .data label{
+	font-size: 20px;
+}
+form .data input{
+	height: 100%;
+	width: 100%;
+	padding-left: 10px;
+	font-size: 17px;
+	border: 1px solid silver;
+}
+form .data input:focus{
+	border-color: #168;
+	border-bottom-width: 2px;
+}
+.forgot-pass{
+	margin-top: 7px;
+}
+form .forgot-pass a{
+	color: #168;
+	text-decoration: none;
+}
+form .forgot-pass a:hover{
+	text-decoration: underline;
+	color: blue;
+}
+.btn{
+	margin: 30px 0;
+	height: 45px;
+	width: 100%;
+
+}
+.btn button{
+	height: 100%;
+	width: 100%;
+	background: none;
+	border: none;
+	color: #fff;
+	background: #5199e4;
+	font-size: 18px;
+	font-weight: 500;
+	text-transform: uppercase;
+	cursor: pointer;
+
+}
+.signup-link{
+	text-align: center;
+}
+.signup-link a{
+	color: #5199e4;
+	text-decoration: none;
+}
+.signup-link a:hover{
+	color: #5199e4;
+	text-decoration: underline;
+}
+nav{
+	width: 100%;
+	height: 50px;
+	background: #fff;
+	padding: 0px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+nav .menu a{
+	margin: 10px 10px;
+	text-decoration: none;
+	font-size: 18px;
+	color: #5199e4;
+}
+nav .menu a:hover{
+	text-decoration: underline;
+}
+.container-fluid{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	display: block;
+	background: #ffff;
+	width: 410px;
+	padding: 30px;
+}
+.container-fluid h1,.container-fluid h2{
+	font-size: 400;
+}
+.container-fluid img{
+	width: 200px;
+}
+.container-fluid{
+	width: 600px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+h1{
+	text-align: center;
+	color: black;
+	font-family: fantasy;
+}

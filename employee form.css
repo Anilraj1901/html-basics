@@ -1,0 +1,25 @@
+h1{
+
+	color: black;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 10px;
+
+
+}
+div{
+	background: orangered;
+}
+.anil{
+	text-align: center;
+    border-bottom: bold white;
+	padding-top: 20px;
+	padding-bottom: 50px;
+    border-top: solid white;
+    border-right:thin white;
+
+}
+.vedha{
+	padding-top: 20px;
+	border-top: white solid;
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title1>registration </title1><br><br>
+	<title>html form</title>
+</head>
+<body>
+   <label for="fname">first name: </label><br>
+<input type="text" id="fname" name="fname"  required   placeholder="first name" ><br>
+<label for="ltname">last name: </label><br>
+<input type="text" id="ltname" name="ltname" value="raj"><br><br>
+
+
+SELECT YOUR GENDER<br>
+<label for="male">male </label>
+<input type="radio" id="male" name="gender" value="male"><br>
+<label for="female">female </label>
+<input type="radio" id="female" name="gender" value="female"><br>
+<label for="others">others </label>
+<input type="radio" id="others" name="gender" value="others"><br>
+
+SELECT YOR OTHERS
+<label for="male">male </label>
+<input type="checkbox" id="male" name="gender" value="male"><br>
+<label for="female">female </label>
+<input type="checkbox" id="female" name="gender" value="female"><br>
+<label for="others">others </label>
+<input type="checkbox" id="others" name="gender" value="others"><br>
+
+
+<input type="submit">
+<input type="button" value="try again">
+
+<select size="3" multiple>
+	<option value="audi" >audi</option>
+	<option value="bmw" selected>bmw</option>
+	<option value="benz"selected>benz</option>
+	<option value="rr">rr</option>
+
+</select><br><br>
+<textarea>
+	welcome to the world
+</textarea>
+
+<button>login</button><br><br>
+<fieldset>
+	<legend>personal information</legend>
+	 <label for="fname">first name: </label><br>
+<input type="text" id="fname" name="fname" value="anil"><br>
+<label for="ltname">last name: </label><br>
+<input type="text" id="ltname" name="ltname" value="raj">
+
+</fieldset><br><br>
+
+
+<input list="cars">
+<datalist id="cars">
+	<option value="audi">audi </option>
+	<option value="bmw">bmw</option>
+	<option value="benz"selected>benz</option>
+	<option value="rr">rr</option>
+</datalist>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+doctype html
+head
+  title EMPLOYEE MANAGEMENT
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  // Bootstrap CSS
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+  script(src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')
+style(type='text/css').
+  h1{
+  text-align: center;
+  margin: 50px;
+  color:white;
+  background: blue;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  }
+  form{
+  width: 30%;
+  align-items: center;
+  }
+.container
+  h1 EMPLOYEE MANAGEMENT SYSTEM
+  form(name="myform"  action="/employee"  method ='post')
+    .form-group
+      label FIRST NAME
+      input.form-control(type='text' name='firstname' id='firstname' placeholder='enter the firstname' required='')
+    .form-group
+      label LAST NAME
+      input.form-control(type='text' name='lastname' id='lastname' placeholder='enter the lastname' required='')
+    .form-group
+      label MOBILENUMBER
+      input.form-control(type='text' name='mobilenumber' id='mobilenumber' placeholder='enter the mobilenumber' required='')
+    .form-group
+      label ADDRESS
+      input.form-control(type='text' name='address' id='address' placeholder='enter the address' required='')
+    .form-group
+      label Email
+      input.form-control(type='email' name='email' id='email' placeholder='enter the email' required='')
+    .form-group
+      label PASSWORD
+      input.form-control(type='password' name='password' id='email' placeholder='enter the email' required='')
+    button.btn.btn-success.btn-save(type='submit' value='submit') Save
+  br
+  table.table.table-bordered.data-table
+    thead
+      th FIRSTNAME
+      th LASTNAME
+      th MOBILENUMBER
+      th ADDRESS
+      th EMAIL
+      th PASSWORD
+      th Action
+    tbody
+
+script(type='text/javascript').
+  $("myform").submit(function(e) {
+   e.preventDefault(); 
+   var firstname=$("input[name='firstname']").val();
+   var lastname=$("input[name='lastname']").val();
+   var mobilenumber=$("input[name='mobilenumber']").val();
+   var address=$("input[name='address']").val();
+   var email=$("input[name='email']").val();
+    var password=$("input[name='password']").val();
+   $(".data-table tbody").append("<tr data-firstname='"+firstname+"'  data-lastname='"+lastname+"'  data-mobilenumber='"+mobilenumber+"' data-address='"+address+"'  data-email='"+email+"' data-email='"+password+"'><td>"+firstname+"</td><td>"+lastname+"</td><td>"+mobilenumber+"</td><td>"+address+"</td><td>"+email+"</td><td>"+password +"</td><td><button class='btn btn-danger btn-lg btn-delete mr-3' type='button'>Delete</button><button class='btn btn-info btn-lg btn-edit' type='button'>Edit</button></td></tr>");
+   $("input[firstname='']").val("");
+   });
+
+  
+
+  $('body').on('click','.btn-delete',function() {
+  $(this).parents('tr').remove();
+  });
+  $('body').on('click','.btn-edit',function() {
+  var firstname=$(this).parents('tr').attr('data-firstname');
+  var lastname=$(this).parents('tr').attr('data-lastname');
+  var mobilenumber=$(this).parents('tr').attr('data-mobilenumber');
+  var address=$(this).parents('tr').attr('data-address');
+  var email=$(this).parents('tr').attr('data-email');
+  var password=$(this).parents('tr').attr('data-password');
+  $(this).parents('tr').find('td:eq(0)').html("<input name='edit_text' value='"+firstname+"'>");
+  $(this).parents('tr').find('td:eq(1)').html("<input name='edit_text' value='"+lastname+"'>");
+  $(this).parents('tr').find('td:eq(2)').html("<input name='edit_text' value='"+mobilenumber+"'>");
+  $(this).parents('tr').find('td:eq(3)').html("<input name='edit_text' value='"+address+"'>");
+  $(this).parents('tr').find('td:eq(4)').html("<input name='edit_email' value='"+email+"'>");
+  $(this).parents('tr').find('td:eq(5)').html("<input name='edit_email' value='"+password+"'>");
+  $(this).parents('tr').find('td:eq(6)').prepend("<button type='button' class='btn btn-info btn-lg btn-update mr-3'>Update</button>");
+  $(this).hide()
+  });
+  $('body').on('click','.btn-update',function() {
+  var firstname=$(this).parents('tr').find("input[firstname='edit_text']").val();
+  var lastname=$(this).parents('tr').find("input[lastname='edit_text']").val();
+  var mobilenumber=$(this).parents('tr').find("input[mobilenumber='edit_text']").val();
+  var address=$(this).parents('tr').find("input[address='edit_text']").val();
+  var email=$(this).parents('tr').find("input[email='edit_email']").val();
+  var password=$(this).parents('tr').find("input[password='edit_text']").val();
+  $(this).parents('tr').find('td:eq(0)').text(firstname);
+  $(this).parents('tr').find('td:eq(0)').text(lastname);
+  $(this).parents('tr').find('td:eq(0)').text(mobilenumber);
+  $(this).parents('tr').find('td:eq(0)').text(address);
+  $(this).parents('tr').find('td:eq(1)').text(email);
+   $(this).parents('tr').find('td:eq(0)').text(password);
+  $(this).parents('tr').attr('data-firstname',firstname);
+  $(this).parents('tr').attr('data-lastname',lastname);
+  $(this).parents('tr').attr('data-mobilenumber',mobilenumber);
+  $(this).parents('tr').attr('data-address',address);
+  $(this).parents('tr').attr('data-email',email);
+   $(this).parents('tr').attr('data-password',password);
+  $(this).parents('tr').find('.btn-edit').show();
+  $(this).parents('tr').find('.btn-update').remove();
+  })
